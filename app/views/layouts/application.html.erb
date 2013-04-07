@@ -9,9 +9,16 @@
 </head>
 <body>
   <%= render partial: 'layouts/header'%>
-  <div class="container">
+  <div class="center container">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+    <h3>Cat of the Day</h3>
+    <%= link_to image_tag("http://www.catoftheday.com/archive/2013/April/#{today}.jpg", size: "300x300"), "http://www.catoftheday.com/" %>
+
     <%= yield %>
     <%= render partial: 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
   </div>
 </body>
 </html>

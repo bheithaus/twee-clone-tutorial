@@ -8,4 +8,11 @@ module ApplicationHelper
       "#{base_title} | #{page_title}"
     end
   end
+
+  def today
+    day = Date.current().day - 1
+    return "0#{day}" if day < 10
+
+    day
+  end
 end

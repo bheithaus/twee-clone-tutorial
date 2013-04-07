@@ -15,4 +15,8 @@ module ApplicationHelper
 
     day
   end
+
+  # def app_name
+ #
+ #  end
 end

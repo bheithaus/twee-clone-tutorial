@@ -6,7 +6,7 @@ describe "StaticPages" do
   describe "Home page" do
     before { visit root_path }
 
-    it { should have_selector('h1', text: 'Sample App') }
+    it { should have_selector('h1', text: 'MaxFun') }
     it { should have_selector('title', text: "RoR Tut App") }
     it { should_not have_selector('title', text: "| Home") }
   end
@@ -43,7 +43,7 @@ describe "StaticPages" do
     click_link "Home"
     click_link "Sign up Now!"
     page.should have_selector 'title', text: 'Sign Up'
-    click_link "sample-app"
+    click_link "MaxFun"
     page.should have_selector 'title', text: 'App'
   end
 end

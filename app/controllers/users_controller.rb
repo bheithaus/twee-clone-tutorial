@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_filter :correct_user,   only: [:edit, :update]
   before_filter :admin_user, only: :destroy
   def index
-    @users = User.paginate(page: params[:oage])
+    @users = User.paginate(page: params[:page])
   end
 
   def show
